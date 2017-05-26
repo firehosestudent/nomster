@@ -1,3 +1,6 @@
+
+
+
 @import "bootstrap";
 
 
@@ -39,4 +42,14 @@ body {
   background: image_url("cartographer.png");
   box-shadow: 0px 1px 3px #2a2a2a;
 
+}
+
+.navbar-inverse .navbar-brand {
+
+  color: #93DADB;
+  font-family: 'sinkin_sans100_thin';
+  font-size:26px;
+  
+
+  
 }
