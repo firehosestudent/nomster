@@ -40,7 +40,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+gem 'kaminari'
+
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'simple_form'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
