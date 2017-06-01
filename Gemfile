@@ -42,6 +42,10 @@ end
 
 gem 'kaminari'
 
+gem 'geocoder'
+
+gem 'figaro'
+
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
