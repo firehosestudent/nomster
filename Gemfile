@@ -55,6 +55,9 @@ gem "font-awesome-rails"
 
 gem "devise"
 
+
+gem 'carrierwave', '~> 1.0'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
