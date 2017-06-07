@@ -3,17 +3,30 @@
 <div class="booyah-box col-10 offset-1">
 
 
+  <h1>photos</h1>
+
+  <% @place.photos.each do |photo| %>
+    <div>
+      <%= photo.description %>
+      <%= photo.picture %>
+    </div>
+  <% end %>
 
 
-<h1><%= @place.name %></h1>
-
-<i><%= @place.address %></i>
 
 
 
-<br /><br />
 
-<p><%= @place.description %></p>
+
+  <h1><%= @place.name %></h1>
+
+  <i><%= @place.address %></i>
+
+
+
+  <br /><br />
+
+  <p><%= @place.description %></p>
 
 
 
@@ -124,6 +137,7 @@
 <div class="clear"></div>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :description %>
+  <%= f.input :picture %>
   <%= f.submit "Upload Picture", class: 'btn btn-primary' %>
 <% end %>
 
