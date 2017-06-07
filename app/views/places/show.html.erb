@@ -5,13 +5,19 @@
 
   <h1>photos</h1>
 
+  <div class="clear"></div>
+
+  <div>
   <% @place.photos.each do |photo| %>
     <div>
       <%= photo.description %>
-      <%= photo.picture %>
+      <%= image_tag photo.picture %>
     </div>
   <% end %>
+  </div>
 
+
+  <div class="clear"></div>
 
 
 
@@ -157,6 +163,20 @@
 <% end %>
 
 </div>
+
+
+
+
+  <h1>photos</h1>
+
+  <div>
+  <% @place.photos.each do |photo| %>
+    <div>
+      <%= photo.description %>
+      <%= photo.picture %>
+    </div>
+  <% end %>
+  </div>
 
 
 
