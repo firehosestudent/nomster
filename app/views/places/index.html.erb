@@ -30,6 +30,14 @@
     <% end %>
 
 
+    <% if place.photos.present? %>
+
+    <div>
+      
+      <%= image_tag place.photos.last.picture %>
+    </div>
+    <% end %>
+
 
   </div>
 
