@@ -140,12 +140,44 @@
 <br />
 <br />
 
-<div class="clear"></div>
-<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-  <%= f.input :description %>
-  <%= f.input :picture %>
-  <%= f.submit "Upload Picture", class: 'btn btn-primary' %>
-<% end %>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  upload photos
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload a picture</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <div class="modal-body">
+          
+          
+            <%= f.input :description %>
+            <%= f.input :picture %>
+          
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= f.submit "Upload Picture", class: 'btn btn-primary' %>
+      </div>
+     <% end %>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 <div class="row">
