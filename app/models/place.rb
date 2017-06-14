@@ -1,7 +1,7 @@
 class Place < ApplicationRecord
 
 belongs_to :user
-has_many :comments
+has_many :comments, :dependent => :destroy
 has_many :photos
 
 validates :name, :description, :address, presence: true
@@ -11,3 +11,7 @@ after_validation :geocode
 
 
 end
+
+
+
+
